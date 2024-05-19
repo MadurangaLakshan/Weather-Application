@@ -1,7 +1,7 @@
 const fetchedWeatherData = async (city, units = "metric") => {
   const inputBox = document.getElementById("input-box");
 
-  const API_KEY = "4a042ad4e511fd6f43df9e9d19b60b2f";
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
 
   const CreateIconURL = (iconID) => {
